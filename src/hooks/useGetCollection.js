@@ -48,15 +48,16 @@ export const useGetCollection = (collection) => {
       if (cancelRequest) return;
       db.collection(collection)
         .get()
-        .then((snapshot) =>
-          dispatch({ type: "FETCHED", payload: addID(snapshot) })
-        )
+        .then((snapshot) => {
+          cache.current[collection] = addID(snapshot);
+          dispatch({ type: "FETCHED", payload: addID(snapshot) });
+        })
         .catch((error) => dispatch({ type: "FETCH_ERROR", payload: error }));
     }
 
     return () => (cancelRequest = true);
   }, [collection]);
 
-  console.log(cache, "saved in memory");
+  // console.log(cache, "saved in memory");
   return { ...state };
 };
