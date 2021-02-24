@@ -1,6 +1,7 @@
 import styles from "./app.module.css";
 import FooterNav from "./components/footer-nav";
 import HeaderNav from "./components/header-nav";
+import Form from "./components/form";
 import View from "./components/view";
 import Card from "./components/card";
 
@@ -24,8 +25,9 @@ function App() {
               <p>{item.actionScore}</p>
               <p>{item.mood}</p>
               <p>{toDateTimeString(item.timestamp.seconds)}</p>
-            </Card>
-          ))}
+            </Card>))
+        }
+        <Form />
       </View>
       <FooterNav />
     </div>
