@@ -1,0 +1,10 @@
+.app {
+  background: var(--white);
+  height: 100vh;
+  width: 100%;
+
+  display: grid;
+  grid-template-rows: auto 65px;
+
+  overflow: hidden;
+}
