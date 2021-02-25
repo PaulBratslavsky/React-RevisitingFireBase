@@ -47,6 +47,7 @@ export const useGetCollection = (collection) => {
     } else {
       if (cancelRequest) return;
       db.collection(collection)
+        .orderBy('createdAt', 'asc')
         .get()
         .then((snapshot) => {
           cache.current[collection] = addID(snapshot);
