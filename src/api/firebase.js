@@ -25,5 +25,6 @@ firebase.initializeApp(firebaseConfig);
 firebase.analytics()
 
 export const db = firebase.firestore()
+export const firebaseTimestamp = firebase.firestore.FieldValue.serverTimestamp;
 
 export default firebase;

@@ -1,0 +1,46 @@
+.form {
+  padding: var(--padding);
+  background: var(--primary);
+  color: var(--secondary);
+  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--borderRadius);
+}
+
+.form input,
+.form select,
+.form button {
+  background: var(--secondary);
+  border: none;
+  border-radius: 4px;
+  padding: 2px 8px;
+  font-size: 1.4rem;
+  display: block;
+  width: 100%;
+}
+
+.form div {
+  margin-bottom: var(--margin); 
+}
+
+.form input {
+
+}
+
+.form select {
+
+}
+
+.form button {
+  background: var(--secondary);
+  color: var(--primary);
+}
+
+.formError {
+  border-radius: 4px;
+  padding: 2px 8px;
+  color: white;
+  background: red;
+  margin-top: 8px;
+}

@@ -8,7 +8,7 @@ import Card from "./components/card";
 import { useGetCollection } from "./hooks/useGetCollection";
 import { toDateTimeString } from "./utils/toDateTimeString";
 
-const isAuthed = false;
+// const isAuthed = false;
 function App() {
   const { status, data, error } = useGetCollection("dailyAction");
   console.log(status, data, error, "FROM HOOK");
@@ -20,11 +20,11 @@ function App() {
         {data &&
           data.map((item) => (
             <Card key={item.id}>
-              <h1>{item.title}</h1>
-              <p>{item.description}</p>
-              <p>{item.actionScore}</p>
+              <h1>{item.action}</h1>
+              <p>{item.behavior}</p>
+              <p>{item.consequence}</p>
               <p>{item.mood}</p>
-              <p>{toDateTimeString(item.timestamp.seconds)}</p>
+              <p>{toDateTimeString(item.createdAt)}</p>
             </Card>))
         }
         <Form />
