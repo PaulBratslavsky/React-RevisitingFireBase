@@ -12,8 +12,13 @@
   --borderRadius: 8px;
   --padding: 8px;
   --margin: 8px;
+  --background: #edeff1;
 
   --headerHight: 45px;
+}
+
+body {
+  background: var(--background);
 }
 
 h1, h2, h3 {
@@ -24,4 +29,9 @@ h1, h2, h3 {
 p {
   color: var(--dark);
   font-size: 1.4rem
+}
+
+button.pb_btn {
+  background: var(--primary);
+  color: white;
 }

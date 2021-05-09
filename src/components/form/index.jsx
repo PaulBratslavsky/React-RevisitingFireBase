@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { hasError } from "../../utils/hasError";
 
-import styles from "./form.module.css";
+import styles from "./form.module.scss";
 
 import { useAddDocToCollection } from "../../hooks/useAddDocToCollection";
 
